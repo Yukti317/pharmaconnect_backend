@@ -17,9 +17,9 @@ import { MongoClient } from 'mongodb'
 
 // { MongoClient } = require('mongodb')
 
-const Url = "mongodb://localhost:27017/pharma_crm"
+const Url = process.env.MONGO_URL
 const client = new MongoClient(Url)
-const dbName = 'pharma_crm';
+const dbName = process.env.DB_NAME;
 
 export const db = async() =>{
     await client.connect();
