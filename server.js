@@ -17,7 +17,8 @@ import leadRoutes from './routes/lead_routes/lead_routes.js'
 const app = express()
 app.use(express.json())
 app.use(cors({
-    origin: "http://localhost:3000", // change to live url
+    origin: "https://pharmaconnect-front.vercel.app", // change to live url
+    // origin: "http://localhost:3000", // change to live url
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     allowedHeaders: ['Content-Type', 'Authorization', 'Cache-Control', 'Expires', 'Pragma'],
     credentials: true
