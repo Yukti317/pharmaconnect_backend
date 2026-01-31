@@ -2,7 +2,6 @@
 import dotenv from "dotenv";
 dotenv.config();
 
-
 // const db = mysql.createPool({
 //     host: process.env.DB_HOST || 'localhost',
 //     user: process.env.DB_USER || 'root',
@@ -28,7 +27,6 @@ export const db = async() =>{
     return {
         leads: db.collection("leads"),
         products: db.collection("products"),
-        quotation_items: db.collection("quotation_items"),
         quotation: db.collection("quotations"),
         exports: db.collection("exports"),
         export_docs: db.collection("export_docs"),
